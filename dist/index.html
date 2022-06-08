@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="bundle.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Weather App</h1>
+        </header>
+        <div class="form-container">
+            <form class="search-bar" id="searchBar" novalidate>
+                <input
+                class="input"
+                id="searchInput"
+                type="text"
+                placeholder="Enter city name"
+                />
+                <div class="error">
+                    <p>no location found</p>
+                </div>
+                    <div class="convert">
+                        <input type="radio" id="fahrenheit" name="temperature" value="fahrenheit">
+                        <label for="fahrenheit">F°</label>
+                        <input type="radio" id="celsius" name="temperature" value="celsius">
+                        <label for="celsius">C°</label>
+                    </div>
+                <button class="btn btn-outline-light btn-sm" id="searchBtn" type="submit">
+                Search
+                </button>
+            </form>
+        </div>
+        <main class="main">
+            <div class="result" id="result">
+                <h2 id="cityName"></h2>
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <div class="high-low">
+                    <p id="tempMax"></p>
+                    <p id="tempMin"></p>                  
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div id="year"></div>
+      </footer>
+</body>
+</html>
